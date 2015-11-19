@@ -65,7 +65,13 @@ class Users extends BaseUsers
                 'username'=>$model->name,
                 'password'=>$model->uuid];
             if($login->validate() && $login->login()) {
-                return ['success'=>true, 'user'=>['uuid'=>$model->uuid, 'name'=>$model->name, 'login'=>true], 'question'=>Dictonary::getQuestion($model->id)];
+                return [
+                    'success'=>true,
+                    'user'=>['uuid'=>$model->uuid, 'name'=>$model->name, 'login'=>true],
+                    'question'=>Dictonary::getQuestion($model->id),
+                    'error'=>ErrorAnswers::getCount($model->id),
+                    'ok'=>Answers::getCount($model->id, Answers::FLAG_OK),
+                ];
             }
         }
         return ['success'=>false, 'error'=>'Не смогли получить данные'];

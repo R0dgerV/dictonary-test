@@ -12,7 +12,8 @@
                     if (data.success == true) {
                         $scope.data.user = data.user;
                         $scope.data.question = data.question;
-
+                        $scope.data.error = data.error;
+                        $scope.data.ok = data.ok;
                     }
                     else {
                         ngNotify.set('Ошибка при coхранении: ' + data.error, 'error');
