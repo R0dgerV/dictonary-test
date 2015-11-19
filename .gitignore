@@ -54,14 +54,14 @@ composer.lock
 
 #  Yii     #
 ############
-config/*
+#config/*
 vendor/*
 build/**/*
 bin/*
 phpdoc/*
 cache/*
 
-www/protected/config/local.php
+#www/protected/config/local.php
 
 #admin/assets/*
 #admin/protected/runtime/*
