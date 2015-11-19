@@ -56,10 +56,17 @@ class Users extends BaseUsers
                 $model->name = $request['name'];
                 if (!$model->save()) {
                     return ['success'=>false, 'error'=>CVarDumper::dumpAsString($model->getErrors())];
+                    Yii::app()->end();
                 }
             }
             $model->setCookies();
-            return ['success'=>true, 'user'=>['uuid'=>$model->uuid, 'name'=>$model->name, 'login'=>true], 'question'=>Dictonary::getQuestion($model->id)];
+            $login=new LoginForm;
+            $login->attributes = [
+                'username'=>$model->name,
+                'password'=>$model->uuid];
+            if($login->validate() && $login->login()) {
+                return ['success'=>true, 'user'=>['uuid'=>$model->uuid, 'name'=>$model->name, 'login'=>true], 'question'=>Dictonary::getQuestion($model->id)];
+            }
         }
         return ['success'=>false, 'error'=>'Не смогли получить данные'];
     }
