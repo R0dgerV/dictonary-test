@@ -61,29 +61,18 @@ bin/*
 phpdoc/*
 cache/*
 
-#www/protected/config/local.php
+www/protected/config/local.php
 
-#admin/assets/*
-#admin/protected/runtime/*
-#admin/.htaccess
-##admin/js/components/*
-#admin/js/components_bower/*
-#www/js/components_bower/*
-#www/assets/*
-#www/protected/runtime/*
-#www/.htaccess
-#www/protected/node_modules/*
+www/assets/*
+www/protected/runtime/*
+www/.htaccess
+www/protected/node_modules/*
 
 #  Logs  #
 ##########
 logs/*
 temp/*
 upload_log.txt
-
-#   Sitemaps   #
-################
-www/sitemaps/*
-www/markets/*
 
 # Programms generated files #
 #############################
