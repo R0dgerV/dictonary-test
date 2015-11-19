@@ -42,14 +42,6 @@ Thumbs.db
 .htaccess
 cache.properties
 
-#  Sphinx  #
-############
-sphinx-*.xml
-sphinx-dist/sphinx.conf
-console/config/sphinx.php
-
-sphinx-product-delta.pid
-
 #  LOAD JS #
 ############
 www/js/data/*.js
@@ -70,23 +62,17 @@ phpdoc/*
 cache/*
 
 www/protected/config/local.php
-common/config/overrides/local.php
-admin/protected/config/overrides/local.php
-console/config/overrides/local.php
-www/protected/config/overrides/local.php
-tests/config/overrides/local.php
 
-admin/assets/*
-admin/protected/runtime/*
-admin/.htaccess
-#admin/js/components/*
-admin/js/components_bower/*
-www/js/components_bower/*
-www/assets/*
-www/protected/runtime/*
-www/.htaccess
-www/protected/node_modules/*
-common/components/htmlTemplates/*.tmpl
+#admin/assets/*
+#admin/protected/runtime/*
+#admin/.htaccess
+##admin/js/components/*
+#admin/js/components_bower/*
+#www/js/components_bower/*
+#www/assets/*
+#www/protected/runtime/*
+#www/.htaccess
+#www/protected/node_modules/*
 
 #  Logs  #
 ##########
