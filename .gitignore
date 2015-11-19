@@ -69,7 +69,7 @@ bin/*
 phpdoc/*
 cache/*
 
-protected/config/local.php
+www/protected/config/local.php
 common/config/overrides/local.php
 admin/protected/config/overrides/local.php
 console/config/overrides/local.php
